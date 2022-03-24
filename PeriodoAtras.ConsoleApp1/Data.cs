@@ -4,24 +4,24 @@ using System.ComponentModel;
 namespace PeriodoAtras.ConsoleApp1
 {
     public class Data
-        {
-          public  DateTime dateHoje;
-           public DateTime dataInformada;
+    {
+        public DateTime dateHoje;
+        public DateTime dataInformada;
 
         public string Mensagen(TimeSpan dias)
         {
-            if (dias.Days<7)
+            if (dias.Days < 7)
             {
                 A dia = (A)dias.Days;
                 return ($"{dia} dias se passaram");
             }
-           else if (dias.Days >= 7&& dias.Days < 30)
+            else if (dias.Days >= 7 && dias.Days < 30)
             {
                 A dia = (A)(dias.Days % 7);
                 A semanas = (A)(dias.Days / 7);
                 return ($"{semanas} semandas se passaram e {dia} dia(s)");
             }
-              else if (dias.Days >= 30 && dias.Days < 360)
+            else if (dias.Days >= 30 && dias.Days < 360)
             {
                 A dia = (A)(((dias.Days % 30) % 7));
                 A semanas = (A)((dias.Days % 30) / 7);
@@ -38,17 +38,17 @@ namespace PeriodoAtras.ConsoleApp1
             }
             return "";
         }
-    }
-    public enum A 
-    {
-        [Description("zero")]
-        zero = 0,
-        [Description("um")]
-        um = 1,
-        [Description("dois")]
-        dois = 2
+        public enum A
+        {
+            [Description("zero")]
+            zero = 0,
+            [Description("um")]
+            um = 1,
+            [Description("dois")]
+            dois = 2
 
 
+        }
     }
   
     
