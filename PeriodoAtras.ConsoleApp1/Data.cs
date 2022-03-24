@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace PeriodoAtras.ConsoleApp1
 {
@@ -27,6 +28,17 @@ namespace PeriodoAtras.ConsoleApp1
             }
             return "";
         }
+    }
+    public enum A 
+    {
+        [Description("zero")]
+        zero = 0,
+        [Description("um")]
+        um = 1,
+        [Description("dois")]
+        dois = 2
+
+
     }
   
     
