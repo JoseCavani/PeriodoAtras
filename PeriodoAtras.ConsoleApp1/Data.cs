@@ -9,6 +9,22 @@ namespace PeriodoAtras.ConsoleApp1
 
         public string Mensagen(TimeSpan dias)
         {
+
+            if (dias.TotalDays < 1)
+            {
+                if (dias.TotalMinutes < 60 && dias.TotalSeconds > 60)
+                {
+                    return ($"{dias.TotalMinutes % 60:F0} minutos atrás");
+                }
+                else if (dias.TotalSeconds < 60)
+                {
+                    return ($"{dias.TotalSeconds % 60:F0} segundos atrás");
+                }
+                return ($"{dias.Hours % 24} horas atrás");
+            }
+
+
+
             if (dias.Days < 7)
             {
                 IntParaStringDias dia = (IntParaStringDias)dias.Days;
