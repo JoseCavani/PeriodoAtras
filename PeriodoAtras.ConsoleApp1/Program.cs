@@ -16,5 +16,3 @@ namespace PeriodoAtras.ConsoleApp1
         }
     }
 }
-
-
